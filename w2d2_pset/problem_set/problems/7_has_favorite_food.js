@@ -22,9 +22,6 @@ hasFavoriteFood(person, 'burgers'); // => true
 hasFavoriteFood(person, 'fish'); // => false
 ***********************************************************************/
 
-function hasFavoriteFood(obj, food) {
-
-}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = hasFavoriteFood;

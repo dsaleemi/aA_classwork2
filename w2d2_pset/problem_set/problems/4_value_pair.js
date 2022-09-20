@@ -12,9 +12,6 @@ valuePair(object1, object2, 'location'); // => [ 'NY', 'SF' ]
 valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 ***********************************************************************/
 
-function valuePair(obj1, obj2, key) {
-
-}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = valuePair;

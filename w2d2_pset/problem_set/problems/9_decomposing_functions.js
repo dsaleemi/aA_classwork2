@@ -18,10 +18,6 @@ isPrime(15); // => false
 isPrime(303212); // => false
 ***********************************************************************/
 
-function isPrime(number) {
-
-}
-
 /***********************************************************************
 Using the `isPrime` function you made, write a function `firstNPrimes(n)`
 that returns an array of the first `n` prime numbers.
@@ -33,9 +29,7 @@ firstNPrimes(1); // => [2]
 firstNPrimes(4); // => [2, 3, 5, 7]
 ***********************************************************************/
 
-function firstNPrimes(n) {
 
-}
 
 /***********************************************************************
 Using `firstNPrimes`, write a function `sumOfNPrimes(n)` that returns
@@ -48,9 +42,9 @@ sumOfNPrimes(1); // => 2
 sumOfNPrimes(4); // => 17
 ***********************************************************************/
 
-function sumOfNPrimes(n) {
 
-}
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = {

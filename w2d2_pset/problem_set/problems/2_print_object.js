@@ -19,19 +19,13 @@ printObject(bootcamp); // prints
 `population - 120`
 ***********************************************************************/
 
-let bootcamp = {
-  name: 'App Academy', 
-  color: 'Red',
-  population: 120, 
-} 
-  // console.log(obj);
 function printObject(obj) {
-  for ( let key in obj){
-    let val = obj[key] //keying into the object
-    console.log( key + '- ' + val)
-  }  
+
+  for (let key in obj) {
+    let value = obj[key];
+    console.log(key + " - " + value);
+  }
 }
-printObject(bootcamp)
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = printObject;

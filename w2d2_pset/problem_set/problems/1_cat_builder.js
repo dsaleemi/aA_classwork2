@@ -12,16 +12,18 @@ cat2; // => { name: 'Nyan', color: 'rainbow', toys: [ 'poptarts' ] }
 ***********************************************************************/
 
 function catBuilder(name, color, toys) {
-  let cat = {};
-  cat.name = name;
-  cat.color = color;
-  cat.toys = toys;
+
+  let cat = {
+
+    name: name,
+    color: color,
+    toys: toys
+
+  }
 
   return cat;
-}
-var cat1 = catBuilder('Whiskers', 'black', ['scratching-post', 'yarn']);
-console.log(cat1); // => { name: 'Whiskers', color: 'black', toys: ['scratching-post', 'yarn'] }
 
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = catBuilder;
