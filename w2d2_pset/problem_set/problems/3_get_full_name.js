@@ -13,7 +13,7 @@ getFullName(p2); // => 'Charlie Brown'
 
 
 function getFullName(person) {
-
+    //testing
     return person.firstName + " " + person.lastName;
 }
 
