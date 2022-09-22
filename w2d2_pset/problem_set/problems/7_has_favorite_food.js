@@ -23,5 +23,19 @@ hasFavoriteFood(person, 'fish'); // => false
 ***********************************************************************/
 
 
+function hasFavoriteFood(obj, food) {
+
+  let foods = obj.favoriteFoods
+  console.log(foods)
+  for (let i = 0; i < foods.length; i++) {
+    let favFood = foods[i];
+    console.log(favFood);
+    if (favFood === food) {
+      return true;
+    }
+  }
+  return false;
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = hasFavoriteFood;

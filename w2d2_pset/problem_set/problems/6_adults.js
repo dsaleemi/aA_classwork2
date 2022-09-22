@@ -16,5 +16,19 @@ adults(ppl); // => [ 'John', 'Jane' ]
 ***********************************************************************/
 
 
+function adults(people) {
+
+  let newArr = [];
+
+  for (let i = 0; i < people.length; i++) {
+    let person = people[i];
+
+    if (person.age >= 18) {
+      newArr.push(person.name);
+    }
+  }
+  return newArr;
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = adults;

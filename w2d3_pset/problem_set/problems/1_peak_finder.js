@@ -16,26 +16,9 @@ peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5]); //=> [2, 6, 8]
 
 function peakFinder(array) {
 
-    for ( i = 0 ; i < array.length ; i += 1){
-        let num = array[i]
-        let prev = array[i-1]
-        let after = array[i +1] 
-        return array [i];
-    }
-    
+    let newArr = [];
+
 }
-
-console.log(peakFinder([1, 2, 3, 2, 1]))
-
-
-// for (let i = 0; i <= 10; i += 1){
-//     console.log(i)
-// }
-
-
-// for ( let i = 10; i >= -2; i -= 1){
-//     console.log(i)
-// }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = peakFinder;

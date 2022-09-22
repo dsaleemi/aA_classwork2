@@ -29,5 +29,22 @@ var peeps = [
 countScores(peeps); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
+function countScores(people) {
+
+  let obj = {}; // going to push new ele into obj
+
+  for (let i = 0; i < people.length; i++) {
+    let person = people[i];
+
+    if (person.name in obj) { /// if the name is in the new obj we created
+      obj[person.name] += person.score; // push the name and add score 
+    } else {
+      obj[person.name] = person.score; // if not push the name and score only
+    }
+
+  }
+  return obj;
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = countScores;

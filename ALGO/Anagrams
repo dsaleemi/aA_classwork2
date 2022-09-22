@@ -1,0 +1,121 @@
+// Write a function anagrams(word1, word2) that takes in 2 words.
+// The function should return true if the words are anagrams of each other. Words are anagrams if the letters used to spell one word are the same letters used to spell the other. 
+// ex. anagrams('rare', 'care') // => true
+// ex. anagrams('lived', 'devil' ) // => true
+// ex. anagrams('type', 'peter') // => false
+
+//ES6
+
+const anagrams1 = (word1, word2) => {
+
+    if (word1.length !== word2.length) return false;
+
+    let obj = {};
+
+    for (let i = 0; i < word1.length; i++) {
+        let chr1 = word1[i];
+        if (!(chr1 in obj)) {
+            obj[chr1] = 1;
+        } else {
+            obj[chr1]++;
+        }
+        let chr2 = word2[i];
+        if (!(chr2 in obj)) {
+            obj[chr2] = -1;
+        } else {
+            obj[chr2]--;
+        }
+    }
+    for (let key in obj) {
+        if (obj[key] !== 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(anagrams1('race', 'care')) // => true
+///// ************* TIME COMPLEXITY *************//////
+// BIG O = WORST CASE SCENERIO 
+// N : SAMPLE SIZE/ LENGTH OF INPUT
+// O(n)
+// ANAGRAM1 : it should technically be O(2n) BUT its a MULTIPLICATIVE CONSTANT
+//set it to O(n)!
+
+
+/////***!!!!!!***DIFFERENT EXAMPLES  ****!!!!!!!******/
+
+const anagrams2 = (word1, word2) => {
+    if (word1.length !== word2.length) return false;
+
+    let obj = {};
+
+    for (let i = 0; i < word1.length; i++) {
+        let chr1 = word1[i]; // r, a, c
+        if (!(chr1 in obj)) obj[chr1] = 0; // r: 0 a: 0
+        obj[chr1]++; // r: 1, a: 1, c: 0
+
+        let chr2 = word2[i]; // c , a
+        if (!(chr2 in obj)) obj[chr2] = 0;
+        obj[chr2]--; // c: -1, a: 0
+    }
+
+    return Object.values(obj).every(ele => ele === 0);
+    //Object.values array of all the values
+    //object.every : will return true if all elements will return true w cb( => ele === 0)
+}
+//console.log(anagram2 ('races', 'cares))
+//*******TIME COMPLEXITY: O(n) */
+
+
+const anagrams3 = (word1, word2) => {
+    let arr2 = word2.split(' ');
+    for (let i = 0; i < word1.length; i++) {
+        let chr1 = word1[i];
+
+        if (!arr2.includes(chr1)) {
+            return false;
+        } else {
+            let idx = arr2.indexOf(chr1);
+            arr2 = arr2.slice(0, idx).concat(arr2.slice(idx + 1))
+        }
+    }
+    return arr2.length === 0;
+}
+// console.log(anagrams3('races', 'scare'))
+//// *********** TIME COMPLEXITY ************  /////
+// 1 * 5
+// 1 * 5
+// 1 * 5
+// 1 * 5
+// 1 * 5
+// 5 * 5
+// 5 ^ 2
+// O(n^2)
+
+// O(n)
+// O(n^2)
+
+
+const anagrams4 = (word1, word2) => {
+    if (word1.length !== word2.length) return false;
+
+    arr1 = word1.split('').sort()
+    arr2 = word2.split('').sort()
+
+    console.log(arr1);
+    console.log(arr2);
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+// console.log(anagrams4('races', 'scares'))
+//**********TIME COMPLEXITY ****************/
+// 0(nlog(n)) bc of the .sort()
+
